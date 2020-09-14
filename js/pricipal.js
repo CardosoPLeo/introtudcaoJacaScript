@@ -19,19 +19,19 @@ for(var i = 0; i < pacientes.length; i++){
     var alturaValida = true;
 
     if(peso <=0 || peso >= 1000 ){
-        peso = false;
-        tdImc.textContent="Peso inválido!";
+        pesoValido = false;
+        tdImc.textContent= "Peso inválido!";
+        paciente.style.backgroundColor = "lightcoral";
     }
     if(altura <=0 || altura >=3.00){
-        altura = false;
+        alturaValida = false;
         tdImc.textContent ="Altura inválida!";
+        paciente.style.backgroundColor = "lightcoral";
     }
 
     if(pesoValido && alturaValida){
         var ICM = peso / (altura * altura);
         tdImc.textContent = ICM.toFixed(2);
-    }else {
-        tdImc.textContent = "Altura e/ou peso inválidos!"
     }
 
 }
