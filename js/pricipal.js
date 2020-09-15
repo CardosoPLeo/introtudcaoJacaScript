@@ -22,11 +22,12 @@ for(var i = 0; i < pacientes.length; i++){
         pesoValido = false;
         tdImc.textContent= "Peso inválido!";
         paciente.style.backgroundColor = "lightcoral";
+        paciente.classList.add("paciente-ivalido");
     }
     if(altura <=0 || altura >=3.00){
         alturaValida = false;
         tdImc.textContent ="Altura inválida!";
-        paciente.style.backgroundColor = "lightcoral";
+        paciente.classList.add("paciente-ivalido");
     }
 
     if(pesoValido && alturaValida){
