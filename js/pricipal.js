@@ -35,5 +35,9 @@ for(var i = 0; i < pacientes.length; i++){
         tdImc.textContent = ICM.toFixed(2);
     }
 
+    var btnAdiconarPaciente = querySelector("#adicionar-paciente");
+    btnAdiconarPaciente.addEventListner("click", function(){
+        
+    });
 }
 
