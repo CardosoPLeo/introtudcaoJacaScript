@@ -36,8 +36,9 @@ for(var i = 0; i < pacientes.length; i++){
     }
 
     var btnAdiconarPaciente = querySelector("#adicionar-paciente");
-    btnAdiconarPaciente.addEventListner("click", function(){
-        
+    btnAdiconarPaciente.addEventListner("click", function(event){
+        event.preventDefault();
+                
     });
 }
 
