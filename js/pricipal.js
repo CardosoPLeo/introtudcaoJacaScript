@@ -13,7 +13,7 @@ for(var i = 0; i < pacientes.length; i++){
     var tdAltura = paciente.querySelector(".info-altura");
     var altura = tdAltura.textContent;
 
-    var tdImc = paciente.querySelector(".info-imc")
+    var tdImc = paciente.querySelector(".info-imc");
 
     var pesoValido = true;
     var alturaValida = true;
@@ -35,36 +35,44 @@ for(var i = 0; i < pacientes.length; i++){
         tdImc.textContent = ICM.toFixed(2);
     }
 
-    var btnAdiconarPaciente = querySelector("#adicionar-paciente");
-    btnAdiconarPaciente.addEventListner("click", function(event){
+    var btnAdicionarPaciente = document.querySelector("#adicionar-paciente");
+    btnAdicionarPaciente.addEventListener("click", function(event){
         event.preventDefault();
-       
-        var form = querySelector("#adcionarPaciente")
-        var nome = form.nome.value;
-        var peso = form.peso.value;
-        var altura = form.altura.value;
-        var gordura = form.gordura.value;
 
-        var pacienteTr = documetn.createElement("tr");
 
-        var nomeTd = document.createElement("td");
-        var pesoTd = document.createElement("td");
-        var alturaTd = document.createElement("td");
-        var gorduraTd = document.createElement("td");
-        //var imcTd = document.createElement("td");
+    var form = document.querySelector("#form-adiciona");
 
+    var nome = form.nome.value;
+    var peso = form.peso.value;
+    var altura = form.altura.value;
+    var gordura = form.gordura.value;
     
-        nomeTd.textContent = nome;
-        pesoTd.textContent = peso;
-        alturaTd.textContent = altura;
-        gorduraTd.textContent = gordura;
-        
-        pacienteTr.appendChild(nomeTd);
-        pacienteTr.appendChild(pesoTd);
-        pacienteTr.appendChild(alturaTd);
-        pacienteTr.appendChild(gorduraTd);
+    
+    
+    var pacienteTr = document.createElement("tr");
 
-        var tabela = document.querySelector("#tabela-pacientes");
-        tabela.appendChild(pacienteTr);
+    var nomeTd = document.createElement("td");
+    var pesoTd = document.createElement("td");
+    var alturaTd = document.createElement("td");
+    var gorduraTd = document.createElement("td");
+    var imcTd = document.createElement("td");
+
+    nomeTd.textContent = nome;
+    pesoTd.textContent = peso;
+    alturaTd.textContent = altura;
+    gorduraTd.textContent = gordura;
+
+    pacienteTr.appendChild(nomeTd);
+    pacienteTr.appendChild(pesoTd);
+    pacienteTr.appendChild(alturaTd);
+    pacienteTr.appendChild(gorduraTd);
+    
+    console.log(pacienteTr);
+
+    var tabela = document.querySelector("#tabela-pacientes");
+        
+    tabela.appendChild(pacienteTr);
+
     });
 }
+
