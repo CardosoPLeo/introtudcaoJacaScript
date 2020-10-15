@@ -152,3 +152,6 @@ button[disabled=disabled], button:disabled {
 label{
 	font-weight: bold;
 }
+.invisivel{
+	display: none;
+}
